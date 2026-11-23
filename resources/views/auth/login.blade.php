@@ -9,6 +9,8 @@
 
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
@@ -84,6 +86,18 @@
             <x-primary-button class="w-2/3 justify-center !bg-blue-600 hover:!bg-blue-700 py-3 text-sm font-semibold text-white">
                 Iniciar sesión
             </x-primary-button>
+        </div>
+
+        <!-- Enlace a registro -->
+        <div class="mt-5 border-t border-slate-200 pt-5 text-center">
+            <span class="text-sm text-slate-600">
+                ¿No tienes una cuenta?
+            </span>
+
+            <a href="{{ route('register') }}"
+            class="text-sm font-semibold text-blue-700 transition hover:text-blue-900">
+                Regístrate
+            </a>
         </div>
     </form>
 
